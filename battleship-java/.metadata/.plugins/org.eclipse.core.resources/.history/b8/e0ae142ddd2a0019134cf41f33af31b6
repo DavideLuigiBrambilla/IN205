@@ -1,0 +1,69 @@
+public class Board {
+	
+		private int size;
+		private String nom;
+		private char navires[][]; 
+		private boolean frappes[][];
+	
+
+public Board(String nom, int size){ //Constructeur avec en arguments le nom et la taille de la grille
+	this.size = size;
+	this.nom = nom;
+}
+
+public Board(String nom){ //ici j'ai deux signatures differentes de deux constructeurs du coup je peux les appeller avec le meme nom
+	this.nom = nom;		  //c'est le deuxieme type de constructeur 
+	this.size = 10;
+}
+
+public void print(){	  //fonction pour afficher les deux grilles 
+	
+	char letter = 'A';
+	char point = '.'; 
+	int num = 1;
+	
+    System.out.println(this.nom);
+    
+    System.out.print("Navires:\n");
+    
+	for (int i = 0; i < this.size; i++){	//boucle pour afficher les lettres de la premiere grille
+		System.out.print("\t" + letter);    //J'ai utilisé \t parce que comme ca j'ai un bonne identation
+		letter++;
+		}
+	
+	
+	for (int i = 0; i < this.size; i++){ 	//boucle pour afficher les differentes lignes de la premiere grille
+		System.out.print("\n");
+		System.out.print(num);
+		num++;
+		for (int k = 0; k < this.size; k++){
+			System.out.print("\t" + point);
+		}
+	}
+	
+	System.out.println();
+	System.out.println();
+	System.out.println();
+	System.out.println();
+	
+	System.out.print("Frappes: \n");
+	
+	letter = 'A';
+	num = 1;
+	
+	for (int i = 0; i < this.size; i++){	//boucle pour afficher les lettres de la deuxieme grille
+		System.out.print("\t" + letter); 	
+		letter++;
+		}
+	
+	
+	for (int i = 0; i < this.size; i++){	//boucle pour afficher les differentes lignes de la premiere grille
+		System.out.print("\n");
+		System.out.print(num);
+		num++;
+		for (int k = 0; k < this.size; k++){
+			System.out.print("\t" + point);
+		}
+	}
+}
+}

@@ -1,0 +1,8 @@
+public class TestBoard {						//fonction de test pour afficher les lignes avec un main
+	public static void main(String[] args){
+		Board prova = new Board("Davide", 15);			//creation de une variable de type class Board et initialisation avec le constructeur
+		//Board prova = new Board("Davide");		
+		prova.print();							//verificqtion que la fonction ca marche bien
+		
+	}	
+}

@@ -1,0 +1,65 @@
+public class Board {
+	
+		private int size;
+		private String nom;
+		private char navires[][]; 
+		private boolean frappes[][];
+	
+
+public Board(String nom, int size){
+	this.size = size;
+	this.nom = nom;
+}
+
+public Board(String nom){ //ici j'ai deux signatures differentes de deux constructeurs du coup je peux les appeller avec le meme nom
+	this.nom = nom;
+	this.size = 10;
+}
+
+public void print(){
+	
+	char letter = 'A';
+	char point = '.'; 
+	int num = 1;
+	
+    System.out.println(this.nom);
+    
+    System.out.print("Navires:");
+    
+	for (int i = 0; i < this.size; i++){
+		System.out.print("  " + letter);
+		letter++;
+		}
+	
+	
+	for (int i = 0; i < this.size; i++){
+		System.out.print("\n");
+		System.out.print(num);
+		num++;
+		for (int k = 0; k < this.size; k++){
+			System.out.print("  " + point);
+		}
+	}
+	
+	System.out.print("\n");
+	System.out.print("\n");
+	System.out.print("\n");
+	
+	System.out.print("Navires:");
+    
+	for (int i = 0; i < this.size; i++){
+		System.out.print("  " + letter);
+		letter++;
+		}
+	
+	
+	for (int i = 0; i < this.size; i++){
+		System.out.print("\n");
+		System.out.print(num);
+		num++;
+		for (int k = 0; k < this.size; k++){
+			System.out.print("  " + point);
+		}
+	}
+}
+}

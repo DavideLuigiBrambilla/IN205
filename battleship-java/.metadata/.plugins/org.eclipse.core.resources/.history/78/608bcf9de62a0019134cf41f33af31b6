@@ -1,0 +1,34 @@
+public abstract class AbstractShip{
+	
+	public enum Orien{					//Je vais definir a l'interieur de la classe mere les quatres types de orientation 
+		NORTH, SOUTH, EAST, WEST;
+		}
+	
+	private char label; 				//on defini les elements de la classe mere label,nom,taille et orientation
+	private String nom;
+	private int taille;
+	private Orien orientation;
+	
+	public AbstractShip(char label, String nom, int taille, Orien orientation){
+		this.label = label;
+		this.nom = nom;
+		this.taille = taille;
+		this.orientation = orientation; 
+	}
+	
+	public char getlabel(){ //ici j'ai implementé les methodes pour acceder a partir de le classes filles
+		return sthis.label;
+	}
+	
+	public String getnom(){
+		return this.nom;
+	}
+	
+	public int gettaille(){
+		return this.taille;
+	}
+	
+	public Orien getorientation(){
+		return this.orientation;
+	}
+}

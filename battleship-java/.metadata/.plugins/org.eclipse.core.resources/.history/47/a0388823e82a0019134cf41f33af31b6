@@ -1,0 +1,11 @@
+//classe fille Destroyer avec deux constructeurs
+public class Destroyer extends AbstractShip{
+	
+	public Destroyer(){
+		super('D', "Destroyer", 2, Orien.EAST);
+	}
+	
+	public Destroyer(Orien orientation){
+		super('D', "Destroyer", 2, orientation);
+	}
+}

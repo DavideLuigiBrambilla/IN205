@@ -1,0 +1,18 @@
+public abstract class AbstractShip{
+	
+	public enum Orien{
+		NORTH, SOUTH, EAST, WEST;
+		}
+	
+	private String label; 
+	private String nom;
+	private int taille;
+	private Orien orientation;
+	
+	public AbstractShip(String label, String nom, int taille, Orien orientation){
+		this.label = label;
+		this.nom = nom;
+		this.taille = taille;
+		this.orientation = orientation; 
+	}
+}
